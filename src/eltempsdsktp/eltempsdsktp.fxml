@@ -15,6 +15,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
               <MenuItem fx:id="miDialog" mnemonicParsing="false" onAction="#mieDialogClick" text="Dialog" />
+                  <MenuItem fx:id="miDialegFXML" mnemonicParsing="false" onAction="#miDialegFXMLClick" text="Dialeg FXML" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

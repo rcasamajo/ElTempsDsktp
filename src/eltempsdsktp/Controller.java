@@ -7,11 +7,13 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+
 public class Controller {
     public ListView lvLlistaPrediccions;
     public ImageView ivIconPrediccio;
     public MenuItem miDialog;
     private Dialog dialog;
+    private DlgController dlgController;
 
     public void initialize() {
         ObservableList<String> items = FXCollections.observableArrayList(
@@ -45,6 +47,15 @@ public class Controller {
     }
 
     public void mieDialogClick(ActionEvent actionEvent) {
+        // Mostrem el diàleg
         dialog.show();
+    }
+
+    public void miDialegFXMLClick(ActionEvent actionEvent) {
+        dlgController.showDialogStage();
+    }
+
+    public void setDlgController(DlgController dlgController) {
+        this.dlgController = dlgController;
     }
 }
