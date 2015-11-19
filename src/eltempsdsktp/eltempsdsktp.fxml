@@ -32,28 +32,5 @@
       <ToolBar layoutY="571.0" prefHeight="29.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <ListView fx:id="lvLlistaPrediccions" layoutY="69.0" prefHeight="500.0" prefWidth="400.0" />
       <ImageView fx:id="ivIconPrediccio" fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
-      <DialogPane fx:id="dpDialeg" layoutX="160.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="480.0" visible="false">
-          <header>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
-               <children>
-                  <Label prefHeight="40.0" prefWidth="232.0" text="Dialeg" />
-               </children></AnchorPane>
-          </header>
-          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
-               <children>
-                  <Label prefHeight="63.0" prefWidth="480.0" text="Contingut" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-               </children></AnchorPane>
-          </content>
-          <expandableContent>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
-          </expandableContent>
-         <buttonTypes>
-            <ButtonType fx:constant="CLOSE" />
-         </buttonTypes>
-         <graphic>
-            <Label text="-----------------" />
-         </graphic>
-      </DialogPane>
    </children>
 </AnchorPane>
