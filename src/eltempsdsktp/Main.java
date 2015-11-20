@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private Stage dialogStage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("eltempsdsktp.fxml"));
@@ -20,7 +22,7 @@ public class Main extends Application {
         // Load the fxml file and create a new stage for the popup
         FXMLLoader dlgLoader = new FXMLLoader(getClass().getResource("dialeg.fxml"));
         Parent page = dlgLoader.load();
-        Stage dialogStage = new Stage();
+        dialogStage = new Stage();
         dialogStage.setTitle("Diàleg FXML");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         dialogStage.initOwner(primaryStage);
@@ -30,10 +32,9 @@ public class Main extends Application {
         ((DlgController)dlgLoader.getController()).setDialogStage(dialogStage);
 
         // Guardem el controlador del diàleg al controlador principal per poder cridar el mètode que
-        // el mostra quan triem la opció al menú
+        // el mostra quan triem la opció al menú.
         ((Controller)loader.getController()).setDlgController(dlgLoader.getController());
     }
-
 
     public static void main(String[] args) {
         launch(args);

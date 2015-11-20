@@ -20,6 +20,10 @@ public class Controller {
                 "Previsió 1", "Previsió 2", "Previsió 3", "Previsió 4");
         lvLlistaPrediccions.setItems(items);
 
+        this.crearDialog();
+    }
+
+    private void crearDialog() {
         // Definició d'un diàleg usant la classe Dialog
         dialog = new Dialog();
         dialog.setTitle("Diàleg");
@@ -51,11 +55,11 @@ public class Controller {
         dialog.show();
     }
 
-    public void miDialegFXMLClick(ActionEvent actionEvent) {
-        dlgController.showDialogStage();
-    }
-
     public void setDlgController(DlgController dlgController) {
         this.dlgController = dlgController;
+    }
+
+    public void miDialegFXMLClick(ActionEvent actionEvent) {
+        dlgController.showDialogStage();
     }
 }
