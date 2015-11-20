@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -12,24 +11,27 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader1 = new FXMLLoader(getClass().getResource("eltempsdsktp.fxml"));
-        Parent root = loader1.load();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("eltempsdsktp.fxml"));
+        Parent root = loader.load();
         primaryStage.setTitle("El Temps");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
 
         // Load the fxml file and create a new stage for the popup
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("dialeg.fxml"));
-        AnchorPane page = (AnchorPane) loader.load();
+        FXMLLoader dlgLoader = new FXMLLoader(getClass().getResource("dialeg.fxml"));
+        Parent page = dlgLoader.load();
         Stage dialogStage = new Stage();
         dialogStage.setTitle("Diàleg FXML");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         dialogStage.initOwner(primaryStage);
-        Scene scene = new Scene(page);
-        dialogStage.setScene(scene);
-        ((DlgController)loader.getController()).setDialogStage(dialogStage);
+        dialogStage.setScene(new Scene(page));
 
-        ((Controller)loader1.getController()).setDlgController(loader.getController());
+        // Guardem el dialogStage al controlador per poder accedir-hi i mostrar ña finestra
+        ((DlgController)dlgLoader.getController()).setDialogStage(dialogStage);
+
+        // Guardem el controlador del diàleg al controlador principal per poder cridar el mètode que
+        // el mostra quan triem la opció al menú
+        ((Controller)loader.getController()).setDlgController(dlgLoader.getController());
     }
 
 
