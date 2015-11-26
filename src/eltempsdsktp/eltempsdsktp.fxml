@@ -12,7 +12,7 @@
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Dialegs">
             <items>
               <MenuItem fx:id="miDialog" mnemonicParsing="false" onAction="#mieDialogClick" text="Dialog" />
                   <MenuItem fx:id="miDialegFXML" mnemonicParsing="false" onAction="#miDialegFXMLClick" text="Dialeg FXML" />
