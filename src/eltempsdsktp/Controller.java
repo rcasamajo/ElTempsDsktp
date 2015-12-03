@@ -48,6 +48,9 @@ public class Controller {
         // L'afegim a la llista de botons del diàleg (getButtonTypes()) de manera que es situa de manera estàndard
         ButtonType buttonTypeOk = new ButtonType("Okay", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().add(buttonTypeOk);
+
+        // Afegim la fulla d'estil al Dialog
+        dialog.getDialogPane().getScene().getStylesheets().add("css/DarkTheme.css");
     }
 
     public void mieDialogClick(ActionEvent actionEvent) {
