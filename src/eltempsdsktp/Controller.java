@@ -7,7 +7,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-
 public class Controller {
     public ListView lvLlistaPrediccions;
     public ImageView ivIconPrediccio;
@@ -32,8 +31,10 @@ public class Controller {
 
         // Afegim controls i els organitzem en un GridPane
         Label label1 = new Label("Predicció: ");
+        label1.getStyleClass().add("dlgLabels");
         ImageView img1 = new ImageView("01d.png");
         Label label2 = new Label("Sol");
+        label2.getStyleClass().add("dlgLabels");
         // No cal definir el tamany deñ GridPane al crear-lo
         GridPane grid = new GridPane();
         grid.add(label1, 0, 0);
@@ -50,7 +51,7 @@ public class Controller {
         dialog.getDialogPane().getButtonTypes().add(buttonTypeOk);
 
         // Afegim la fulla d'estil al Dialog
-        dialog.getDialogPane().getScene().getStylesheets().add("css/DarkTheme.css");
+        dialog.getDialogPane().getScene().getStylesheets().add("eltempsdsktp/css/DarkTheme.css");
     }
 
     public void mieDialogClick(ActionEvent actionEvent) {

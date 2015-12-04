@@ -7,6 +7,7 @@
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
+    /*-fx-background-color: #1d1d1d;*/
 }
 
 .label-bright {
@@ -21,6 +22,10 @@
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-opacity: 1;
+}
+
+.dlgLabels {
+    -fx-text-fill: black;
 }
 
 .table-view .list-view {
